@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book {
+public class BookEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -22,7 +22,7 @@ public class Book {
     private String publisher;
 
     // Costruttore personalizzato senza id (per la creazione di nuovi oggetti)
-    public Book(String title, String isbn, String publisher) {
+    public BookEntity(String title, String isbn, String publisher) {
         this.title = title;
         this.isbn = isbn;
         this.publisher = publisher;
