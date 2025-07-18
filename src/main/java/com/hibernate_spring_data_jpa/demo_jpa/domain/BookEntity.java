@@ -9,7 +9,10 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Objects;
-
+/**
+ * Entità JPA che rappresenta un libro nel database
+ * Lombok genera automaticamente getter, setter, toString
+ */
 @Entity
 @Data
 @NoArgsConstructor
@@ -17,7 +20,7 @@ import java.util.Objects;
 public class BookEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id; // Chiave primaria generata automaticamente
 
     private String title;
     private String isbn;

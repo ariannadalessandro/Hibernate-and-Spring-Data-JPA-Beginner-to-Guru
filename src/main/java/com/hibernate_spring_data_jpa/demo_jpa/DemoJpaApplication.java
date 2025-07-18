@@ -8,7 +8,7 @@ public class DemoJpaApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoJpaApplication.class, args);
-		System.out.println("Sono nel main");
+		System.out.println("Sono nel main, mi sono avviato\n con mvn clean compile e \n con mvn spring-boot:run");
 	}
 
 }
