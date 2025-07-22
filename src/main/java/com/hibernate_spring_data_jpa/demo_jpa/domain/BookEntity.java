@@ -18,10 +18,16 @@ import java.util.Objects;
 public class BookEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     private Long id; // Chiave primaria generata automaticamente
 
+    @Column(nullable = false, length = 100)
     private String title;
+
+    @Column(name = "isbn", length = 20)
     private String isbn;
+
+    @Column(name = "publisher", length = 100)
     private String publisher;
 
     // Costruttore parametrico personalizzato senza id (per la creazione di nuovi oggetti)
