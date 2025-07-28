@@ -19,7 +19,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @DataJpaTest
-@ComponentScan(basePackages = "com.hibernate_spring_data_jpa.demo_jpa")
+@ComponentScan(basePackages = "com.hibernate_spring_data_jpa.demo_jpa.bootstrap")
 //@ComponentScan(basePackages = {
 //        "com.hibernate_spring_data_jpa.demo_jpa.repositories",
 //        "com.hibernate_spring_data_jpa.demo_jpa.domain"
@@ -34,7 +34,7 @@ public class SpringBootJpaTestSlice {
     @Test
     void testJpaTestSplice() {
         long countBefore = bookRepository.count();
-        assertThat(countBefore).isEqualTo(0);
+        assertThat(countBefore).isEqualTo(2);
 
         bookRepository.save(new BookEntity("My Book", "1235555", "Self"));
 
@@ -47,7 +47,7 @@ public class SpringBootJpaTestSlice {
     @Test
     void testJpaTestSpliceTransaction() {
         long countBefore = bookRepository.count();
-        assertThat(countBefore).isEqualTo(1);
+        assertThat(countBefore).isEqualTo(3);
 
     }
 }
